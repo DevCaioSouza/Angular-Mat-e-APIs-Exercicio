@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   url = 'https://swapi.dev/api/planets/1/'
 
-  constructor(private http: HttpClient){
-    this.http.get(this.url).toPromise().then(data => {
-      console.log(data)
-    })
-  }
+  // constructor(private http: HttpClient){
+  //   this.http.get(this.url).toPromise().then(data => {
+  //     console.log(data)
+  //   })
+  // }
+
+
+
+
 }
 
 //A request get é "observable", mas ñ faz sentido observar pois a request
