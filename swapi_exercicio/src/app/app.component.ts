@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SwapiService } from './swapi.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private swapi: SwapiService){
+
+  }
+
   onTerm(term: string){
-    console.log('I am the app, and here is the term', term)
+    const results = this.swapi.search(term)
+    console.log(results)
   }
 }

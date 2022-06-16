@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
 export class SwapiService {
 
   constructor() { }
+
+  search(term: string){
+    return 'I am swapi search results'
+  }
 }
 
 /*
