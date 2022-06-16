@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
-export class SearchBarComponent implements OnInit {
+export class SearchBarComponent {
+  term = '';
 
   constructor() { }
 
-  ngOnInit(): void {
+  onFormSubmit(event: any){
+    event.preventDefault()
+    console.log(this.term)
   }
-
 }
