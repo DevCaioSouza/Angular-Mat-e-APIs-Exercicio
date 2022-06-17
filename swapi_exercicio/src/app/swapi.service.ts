@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SwapiService {
 
-  constructor() { }
+//aqui temos uma Dependency Injection (nos argumentos do constructor)
+  constructor(private http: HttpClient) {
+
+   }
 
   search(term: string){
-    return 'I am swapi search results'
+    return this.http.get(`https://swapi.dev/api/people/?search=${term}`)
   }
 }
 

@@ -12,7 +12,8 @@ export class AppComponent {
   }
 
   onTerm(term: string){
-    const results = this.swapi.search(term)
-    console.log(results)
+    this.swapi.search(term).subscribe((response) => {
+      console.log(response)
+    })
   }
 }
