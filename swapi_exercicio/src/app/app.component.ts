@@ -13,8 +13,8 @@ export class AppComponent {
 
   onTerm(term: string){
     this.swapi.search(term).subscribe((response: any) => {
-      console.log(response.results.length)
       this.pages = response.results
+      console.log(response.results[0].name)
     })
   }
 }

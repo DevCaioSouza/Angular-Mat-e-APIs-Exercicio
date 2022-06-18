@@ -1,1 +1,12 @@
-{{ pages.length }}
+<table class="table is-striped">
+  <thead>
+    <tr>
+      <th>{{ pages.length + ' Resultados Encontrados' }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let page of pages">
+      <td>{{ page }}</td>
+    </tr>
+  </tbody>
+</table>
