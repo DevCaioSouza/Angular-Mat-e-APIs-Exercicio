@@ -2,11 +2,12 @@
   <thead>
     <tr>
       <th>{{ pages.length + ' Resultados Encontrados' }}</th>
+      <th>{{ pages[0]}}</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let page of pages">
-      <td>{{ page }}</td>
+      <td>{{ page}}</td>
     </tr>
   </tbody>
 </table>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Injectable } from '@angular/core';
 import { SwapiService } from './swapi.service';
 
@@ -7,14 +8,17 @@ import { SwapiService } from './swapi.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pages = [];
 
-  constructor(private swapi: SwapiService){}
+  pages = []
+
+  constructor(private swapi: SwapiService, private http: HttpClient){}
 
   onTerm(term: string){
     this.swapi.search(term).subscribe((response: any) => {
       this.pages = response.results
-      console.log(response.results[0].name)
+      console.log(response.results)
     })
   }
+
+
 }
