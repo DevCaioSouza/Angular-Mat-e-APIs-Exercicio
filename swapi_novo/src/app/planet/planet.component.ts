@@ -15,7 +15,8 @@ export class PlanetComponent implements OnInit {
   ngOnInit(): void {
     this.planetService.getAllPlanets()
       .subscribe((data: Planet)=>{
-        this.planet = data
+        this.planet = data;
+        console.log(this.planet)
       })
   }
 
