@@ -1,7 +1,7 @@
 <div class="body">
   <h1>Pesquise seu personagem de Star Wars - API Swapi</h1>
   <p>
-    Comece a digitar o nome do personagem e veja a mágica acontecer
+    Digite o nome do personagem e obtenha seus dados
   </p>
 
   <div [formGroup]="searchFormGroup">
@@ -10,15 +10,16 @@
 
   <ng-container *ngIf="searchResult$ | async as person">
     <table *ngIf="person.name !== 'No results'; else noResults ">
-      <td class="heading">
-        Name
-      </td>
-      <td>
-        {{person.name}}
-      </td>
-    </table>
+      <tr>
+        <td class="heading">
+          Name
+        </td>
+        <td>
+          {{person.name}}
+        </td>
+      </tr>
 
-    <tr></tr>
+      <tr></tr>
 
     <tr>
       <td class="heading">
@@ -60,6 +61,10 @@
     </tr>
 
     <tr></tr>
+
+    </table>
+
+
 
     <ng-template #noResults>
       No Results Found

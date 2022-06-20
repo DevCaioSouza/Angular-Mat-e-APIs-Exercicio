@@ -1,0 +1,18 @@
+p {
+  font-family: Lato;
+}
+
+table {
+  margin-top: 1rem;
+  width: 50%;
+}
+
+td{
+  width: 50%;
+  border-bottom: 1px solid grey;
+}
+
+td.heading{
+  font-weight: bold;
+  width: 40%
+}
