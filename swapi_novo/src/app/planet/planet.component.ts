@@ -9,6 +9,7 @@ import { PlanetService } from '../services/planet.service';
 })
 export class PlanetComponent implements OnInit {
   private planet!: Planet;
+  // loadedPlanet!: {};
 
   constructor(private planetService: PlanetService) { }
 
