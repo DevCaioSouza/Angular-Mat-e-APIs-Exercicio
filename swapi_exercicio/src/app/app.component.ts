@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Injectable } from '@angular/core';
+import { Observable, forkJoin } from 'rxjs';
 import { SwapiService } from './swapi.service';
 
 @Component({
@@ -18,11 +19,6 @@ export class AppComponent {
       this.pages = response.results
       console.log(response.results)
     })
-  }
-
-  ngOnInit(){
-    let character = this.http.get('https://swapi.co/api/people/1')
-    let characterHomeworld = this.http.get('http://swapi.co/api/planets/1')
   }
 
 }

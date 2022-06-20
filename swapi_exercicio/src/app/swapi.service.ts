@@ -7,9 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class SwapiService {
 
 //aqui temos uma Dependency Injection (nos argumentos do constructor)
-  constructor(private http: HttpClient) {
-
-   }
+  constructor(private http: HttpClient) {}
 
   search(term: string){
     return this.http.get(`https://swapi.dev/api/people/?search=${term}`)
