@@ -21,4 +21,9 @@ export class AppComponent {
     })
   }
 
+  ngOnInit(){
+    this.http.get('https://swapi.dev/api/people/1')
+      .subscribe(res => console.log(res))
+  }
+
 }
