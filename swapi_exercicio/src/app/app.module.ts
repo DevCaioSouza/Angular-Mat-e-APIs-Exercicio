@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageListComponent } from './page-list/page-list.component';
+import { PeopleAPItestComponent } from './people-apitest/people-apitest.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    PageListComponent
+    PageListComponent,
+    PeopleAPItestComponent
   ],
   imports: [
     [BrowserModule, HttpClientModule],

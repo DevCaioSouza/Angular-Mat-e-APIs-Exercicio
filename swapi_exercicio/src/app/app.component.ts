@@ -12,18 +12,13 @@ export class AppComponent {
 
   pages = []
 
-  constructor(private swapi: SwapiService, private http: HttpClient){}
+  constructor(private swapi: SwapiService){}
 
   onTerm(term: string){
     this.swapi.search(term).subscribe((response: any) => {
       this.pages = response.results
       console.log(response.results)
     })
-  }
-
-  ngOnInit(){
-    this.http.get('https://swapi.dev/api/people/1')
-      .subscribe(res => console.log(res))
   }
 
 }
