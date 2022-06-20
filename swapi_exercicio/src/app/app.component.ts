@@ -20,5 +20,9 @@ export class AppComponent {
     })
   }
 
+  ngOnInit(){
+    let character = this.http.get('https://swapi.co/api/people/1')
+    let characterHomeworld = this.http.get('http://swapi.co/api/planets/1')
+  }
 
 }
