@@ -104,5 +104,8 @@
       }
     }
   },
-  "defaultProject": "swapi_search"
+  "defaultProject": "swapi_search",
+  "cli": {
+    "analytics": false
+  }
 }
